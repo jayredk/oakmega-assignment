@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import LocationMap from '@/components/LocationMap.vue';
+</script>
 
 <template>
   <main>
-    <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <LocationMap />
   </main>
 </template>
