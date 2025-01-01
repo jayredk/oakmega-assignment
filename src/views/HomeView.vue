@@ -4,6 +4,7 @@ import LocationMap from '@/components/LocationMap.vue';
 
 <template>
   <main>
-    <LocationMap />
+    <LocationMap @location-update="handleLocationUpdate" />
+    
   </main>
 </template>
