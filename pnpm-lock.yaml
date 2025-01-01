@@ -7,6 +7,7 @@ specifiers:
   autoprefixer: ^10.4.20
   eslint: ^9.14.0
   eslint-plugin-vue: ^9.30.0
+  leaflet: ^1.9.4
   pinia: ^2.3.0
   postcss: ^8.4.49
   prettier: ^3.3.3
@@ -17,6 +18,7 @@ specifiers:
   vue-router: ^4.5.0
 
 dependencies:
+  leaflet: 1.9.4
   pinia: 2.3.0_vue@3.5.13
   vue: 3.5.13
   vue-router: 4.5.0_vue@3.5.13
@@ -1970,6 +1972,10 @@ packages:
   /kolorist/1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
     dev: true
+
+  /leaflet/1.9.4:
+    resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
+    dev: false
 
   /levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
