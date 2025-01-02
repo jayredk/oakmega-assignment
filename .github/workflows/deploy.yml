@@ -43,6 +43,8 @@ jobs:
         run: pnpm install
 
       - name: Build
+        env:
+          VITE_CLIENT_ID: ${{ secrets.VITE_CLIENT_ID }}
         run: pnpm run build
 
       - name: Setup Pages
