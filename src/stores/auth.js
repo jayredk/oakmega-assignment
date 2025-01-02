@@ -42,8 +42,10 @@ export const useAuthStore = defineStore('auth', () => {
       })
     };
     
+    const clientId = import.meta.env.VITE_CLIENT_ID
+
     google.accounts.id.initialize({
-      client_id:"614251307749-gqa8m691boqts478a3iailp7pu58h8de.apps.googleusercontent.com",
+      client_id: clientId,
       callback: handelLoginSuccess
     });
   };
