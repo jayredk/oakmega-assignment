@@ -1,10 +1,21 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { map, tileLayer, marker, geoJSON } from 'leaflet';
+import { map, tileLayer, marker, geoJSON, Icon } from 'leaflet';
 
 import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useAuthStore } from '@/stores/auth';
+
+import iconUrl from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+delete Icon.Default.prototype._getIconUrl;
+
+Icon.Default.mergeOptions({
+    iconRetinaUrl: iconUrl,
+    iconUrl,
+    shadowUrl: iconShadow,
+});
 
 
 const emit = defineEmits(['location-update']);
