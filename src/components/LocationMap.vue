@@ -2,8 +2,10 @@
 import { ref, onMounted } from 'vue';
 import { map, tileLayer, marker, geoJSON } from 'leaflet';
 
-import { useAuthStore } from '@/stores/auth';
+import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
+import { useAuthStore } from '@/stores/auth';
+
 
 const emit = defineEmits(['location-update']);
 
@@ -13,6 +15,14 @@ const mapInstance = ref(null);
 const polygonData = ref([]);
 const authStore = useAuthStore();
 const { googleProfile, facebookProfile } = storeToRefs(authStore);
+
+const router = useRouter();
+
+onMounted(() => {
+  if (!googleProfile.value || !facebookProfile.value) {
+    router.push('/login');
+  }
+})
 
 const initMap = () => {
   mapInstance.value = map(mapContainer.value).setView([25.0374, 121.5167], 13)
